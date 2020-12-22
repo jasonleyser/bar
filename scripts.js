@@ -1,7 +1,7 @@
 function addFire() {
   var date = formatDate();
   console.log(date);
-  fetch("https://api.countapi.xyz/hit/barmelo-for-breakfast-fire/112324")
+  fetch("https://api.countapi.xyz/hit/barmelo-for-breakfast-fire/33442")
     .then((response) => response.json())
     .then((data) => {
       // Here's a list of repos!
@@ -11,7 +11,7 @@ function addFire() {
 }
 
 function countFire() {
-  fetch("https://api.countapi.xyz/get/barmelo-for-breakfast-fire/112324")
+  fetch("https://api.countapi.xyz/get/barmelo-for-breakfast-fire/33442")
     .then((response) => response.json())
     .then((data) => {
       // Here's a list of repos!
