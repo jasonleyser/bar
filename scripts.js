@@ -1,9 +1,7 @@
 function addFire() {
   var date = formatDate();
   console.log(date);
-  fetch(
-    "https://api.countapi.xyz/hit/barmelo-for-breakfast-fire/" + formatDate()
-  )
+  fetch("https://api.countapi.xyz/hit/barmelo-for-breakfast-fire/112324")
     .then((response) => response.json())
     .then((data) => {
       // Here's a list of repos!
@@ -13,14 +11,34 @@ function addFire() {
 }
 
 function countFire() {
-  fetch(
-    "https://api.countapi.xyz/get/barmelo-for-breakfast-fire/" + formatDate()
-  )
+  fetch("https://api.countapi.xyz/get/barmelo-for-breakfast-fire/112324")
     .then((response) => response.json())
     .then((data) => {
       // Here's a list of repos!
       console.log(data);
       document.getElementById("fireValue").innerHTML = data.value;
+    });
+}
+
+function addCoin() {
+  var date = formatDate();
+  console.log(date);
+  fetch("https://api.countapi.xyz/hit/barmelo-for-breakfast-coin/112324")
+    .then((response) => response.json())
+    .then((data) => {
+      // Here's a list of repos!
+      console.log(data);
+      document.getElementById("coinValue").innerHTML = data.value;
+    });
+}
+
+function countCoin() {
+  fetch("https://api.countapi.xyz/get/barmelo-for-breakfast-coin/112324")
+    .then((response) => response.json())
+    .then((data) => {
+      // Here's a list of repos!
+      console.log(data);
+      document.getElementById("coinValue").innerHTML = data.value;
     });
 }
 
@@ -48,6 +66,7 @@ async function getTitle() {
 
 async function refreshData() {
   countFire();
+  countCoin();
   try {
     current_title = "";
 
