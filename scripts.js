@@ -81,6 +81,9 @@ async function refreshData() {
       var info = data.album.split(",");
       console.log(data.title);
 
+      this.document.getElementById("sleepingCover").style.display = "none";
+      this.document.getElementById("playerCover").style.display = "inline";
+
       this.document.getElementById("title").innerHTML = data.title;
       this.document.getElementById("artist").innerHTML = ">" + data.artist;
       this.document.getElementById("year").innerHTML = info[1];
@@ -103,6 +106,9 @@ async function refreshData() {
       }
     } else {
       console.log("Error: Radio is off or has been connection lost");
+
+      this.document.getElementById("sleepingCover").style.display = "inline";
+      this.document.getElementById("playerCover").style.display = "none";
     }
   } catch (err) {
     // catches errors both in fetch and response.json
