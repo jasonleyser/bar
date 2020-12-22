@@ -72,23 +72,24 @@
       class="cover-container d-flex h-100 mx-auto flex-column"
       style="z-index: 1;"
     >
-      <main role="main" class="inner cover" style="margin-top: 20%;">
-        <div
-          id="sleepingCover"
-          style="
-            display: block;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            left: 0;
-            top: 35%;
-          "
-        >
+      <div style="height: 15%;"></div>
+      <main role="main" class="inner cover">
+        <div id="sleepingCover" style="margin-top: 30%;">
           <p class="lead" style="font-size: 24px; text-shadow: 2px 1px #040;">
-            Sleeping...
+            Sleeping<br />...
           </p>
+          <p>Next stream in</p>
+          <p id="demo"></p>
+          <br /><br />
+          <a
+            target="_blank"
+            href="https://www.youtube.com/channel/UCKKePR9Fx8JQb0AVh4Qf6Jg?sub_confirmation=1"
+            style="color: #e81830;"
+            >Subscribe</a
+          ><br />
+          to be notified
         </div>
-        <div id="playerCover" style="display: none;">
+        <div id="playerCover" style="display: none; padding-top: 20%;">
           <p
             id="year"
             class="lead"
@@ -100,7 +101,12 @@
           <h1
             id="title"
             class="cover-heading"
-            style="font-size: 40px; text-shadow: 2px 1px #040;"
+            style="
+              font-size: 40px;
+              text-shadow: 2px 1px #040;
+              padding-left: 4px;
+              padding-right: 4px;
+            "
           ></h1>
           <p
             id="artist"
