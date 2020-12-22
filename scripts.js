@@ -23,7 +23,7 @@ function countFire() {
 function addCoin() {
   var date = formatDate();
   console.log(date);
-  fetch("https://api.countapi.xyz/hit/barmelo-for-breakfast-coin/112324")
+  fetch("https://api.countapi.xyz/hit/barmelo-for-breakfast-coin/33442")
     .then((response) => response.json())
     .then((data) => {
       // Here's a list of repos!
@@ -33,7 +33,7 @@ function addCoin() {
 }
 
 function countCoin() {
-  fetch("https://api.countapi.xyz/get/barmelo-for-breakfast-coin/112324")
+  fetch("https://api.countapi.xyz/get/barmelo-for-breakfast-coin/33442")
     .then((response) => response.json())
     .then((data) => {
       // Here's a list of repos!
