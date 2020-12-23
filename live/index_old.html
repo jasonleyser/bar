@@ -24,7 +24,10 @@
     />
 
     <!-- Custom styles for this template -->
-    <link href="../src/cover.css" rel="stylesheet" />
+    <link
+      href="https://getbootstrap.com/docs/4.0/examples/cover/cover.css"
+      rel="stylesheet"
+    />
     <script src="../scripts.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -45,125 +48,52 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
       body {
-        background-color: #c1554e;
+        background-color: #fff !important;
+        background-image: url("../images/bg.gif");
         font-family: "Press Start 2P", cursive;
         background-size: cover;
         background-position: center bottom;
-        color: #fff;
-      }
-
-      .btn_hover:hover {
-        border: 3px solid #fff;
+        color: #000;
       }
     </style>
   </head>
 
   <body class="text-center" onload="refreshData()">
     <div
+      style="
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        position: absolute;
+        opacity: 0.7;
+      "
+    ></div>
+    <div
       class="cover-container d-flex h-100 mx-auto flex-column"
       style="z-index: 1;"
     >
       <div style="height: 15%;"></div>
       <main role="main" class="inner cover">
-        <div id="sleepingCover" style="margin-top: 10%;">
-          <img
-            width="300px"
-            src="../images/logo.png"
-            style="margin-bottom: 40px;"
-          />
-
-          <p
-            class="lead"
-            style="
-              font-size: 26px;
-              text-shadow: 2px 1px #000;
-              -webkit-text-stroke-width: 1px;
-              -webkit-text-stroke-color: black;
-            "
-          >
+        <div id="sleepingCover" style="margin-top: 30%;">
+          <p class="lead" style="font-size: 24px; text-shadow: 2px 1px #040;">
             Sleeping<br />...
           </p>
-          <br />
-          <p
-            style="
-              text-shadow: 1px 1px #000;
-              -webkit-text-stroke-width: 1px;
-              -webkit-text-stroke-color: black;
-            "
-          >
-            Next stream begins in
-          </p>
-          <p
-            style="
-              text-shadow: 1px 1px #000;
-              -webkit-text-stroke-width: 1px;
-              -webkit-text-stroke-color: black;
-            "
-            id="demo"
-          ></p>
+          <p style="text-shadow: 1px 1px #040;">Next stream in</p>
+          <p style="text-shadow: 1px 1px #040;" id="demo"></p>
+          <br /><br />
+          <a
+            target="_blank"
+            href="https://www.youtube.com/channel/UCKKePR9Fx8JQb0AVh4Qf6Jg?sub_confirmation=1"
+            style="color: #e81830; text-shadow: 2px 1px #040;"
+            >Subscribe</a
+          ><br />
+          to be notified
         </div>
-        <div id="playerCover" style="display: none; padding-top: 10%;">
-          <div
-            style="
-              top: 0;
-              left: 0;
-              position: absolute;
-              height: auto;
-              display: 'block';
-            "
-          >
-            <a
-              style="
-                border-radius: 0px;
-                background-color: #fcb632;
-                border: 3px solid #000;
-                color: #000;
-                position: relative;
-              "
-              class="btn btn btn-secondary"
-              onclick="addCoin()"
-            >
-              <img
-                style="margin-bottom: 4px;"
-                width="23px"
-                src="/Users/jasonleyser/Desktop/Screen Shot 2020-12-22 at 9.08.17 PM.png"
-              />
-              <span id="coinValue">0</span>
-            </a>
-            <a
-              style="
-                border-radius: 0px;
-                background-color: #fcb632;
-                border: 3px solid #000;
-                color: #000;
-                position: relative;
-                margin-left: -18px;
-              "
-              class="btn btn btn-secondary"
-              onclick="addFire()"
-            >
-              <img
-                style="margin-bottom: 4px;"
-                width="16px"
-                src="/Users/jasonleyser/Desktop/Screen Shot 2020-12-22 at 9.09.57 PM.png"
-              />
-              <span id="fireValue">0</span>
-            </a>
-          </div>
-          <img
-            width="300px"
-            src="../images/logo.png"
-            style="margin-bottom: 40px;"
-          />
+        <div id="playerCover" style="display: none; padding-top: 20%;">
           <p
             id="year"
             class="lead"
-            style="
-              font-size: 24px;
-              text-shadow: 2px 1px #000;
-              -webkit-text-stroke-width: 1px;
-              -webkit-text-stroke-color: black;
-            "
+            style="font-size: 24px; text-shadow: 2px 1px #040;"
           >
             LOADING <br />
             PLAYER
@@ -173,22 +103,15 @@
             class="cover-heading"
             style="
               font-size: 40px;
-              text-shadow: 2px 1px #000;
+              text-shadow: 2px 1px #040;
               padding-left: 4px;
               padding-right: 4px;
-              -webkit-text-stroke-width: 1px;
-              -webkit-text-stroke-color: black;
             "
           ></h1>
           <p
             id="artist"
             class="lead"
-            style="
-              font-size: 24px;
-              text-shadow: 2px 1px #000;
-              -webkit-text-stroke-width: 1px;
-              -webkit-text-stroke-color: black;
-            "
+            style="font-size: 24px; text-shadow: 2px 1px #040;"
           ></p>
           <p class="lead" style="margin-top: 48px;">
             <a
@@ -204,6 +127,43 @@
               class="btn btn btn-secondary"
               >discography</a
             >
+            <br />
+            <a
+              style="
+                border-radius: 0px;
+                background-color: #fcb632;
+                border: 3px solid #000;
+                color: #000;
+                margin-top: 32px;
+              "
+              class="btn btn btn-secondary"
+              onclick="addFire()"
+            >
+              <img
+                style="margin-bottom: 4px;"
+                width="26px"
+                src="../images/Screen Shot 2020-12-22 at 9.09.57 PM.png"
+              />
+              <span id="fireValue">0</span>
+            </a>
+            <a
+              style="
+                border-radius: 0px;
+                background-color: #fcb632;
+                border: 3px solid #000;
+                color: #000;
+                margin-top: 32px;
+              "
+              class="btn btn btn-secondary"
+              onclick="addCoin()"
+            >
+              <img
+                style="margin-bottom: 4px;"
+                width="36px"
+                src="../images/Screen Shot 2020-12-22 at 9.08.17 PM.png"
+              />
+              <span id="coinValue">0</span>
+            </a>
           </p>
         </div>
       </main>
