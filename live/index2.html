@@ -65,7 +65,13 @@
     >
       <div style="height: 15%;"></div>
       <main role="main" class="inner cover">
-        <div id="sleepingCover" style="margin-top: 30%;">
+        <div id="sleepingCover" style="margin-top: 10%;">
+          <img
+            width="300px"
+            src="../images/logo.png"
+            style="margin-bottom: 40px;"
+          />
+
           <p
             class="lead"
             style="
@@ -96,21 +102,30 @@
             id="demo"
           ></p>
         </div>
-        <div id="playerCover" style="display: none; padding-top: 20%;">
-          <div style="top: 0; left: 0; position: absolute; height: auto;">
+        <div id="playerCover" style="display: none; padding-top: 10%;">
+          <div
+            style="
+              top: 0;
+              left: 0;
+              position: absolute;
+              height: auto;
+              display: 'block';
+            "
+          >
             <a
               style="
                 border-radius: 0px;
                 background-color: #fcb632;
                 border: 3px solid #000;
                 color: #000;
+                position: relative;
               "
               class="btn btn btn-secondary"
               onclick="addCoin()"
             >
               <img
                 style="margin-bottom: 4px;"
-                width="36px"
+                width="23px"
                 src="/Users/jasonleyser/Desktop/Screen Shot 2020-12-22 at 9.08.17 PM.png"
               />
               <span id="coinValue">0</span>
@@ -121,18 +136,25 @@
                 background-color: #fcb632;
                 border: 3px solid #000;
                 color: #000;
+                position: relative;
+                margin-left: -18px;
               "
               class="btn btn btn-secondary"
               onclick="addFire()"
             >
               <img
                 style="margin-bottom: 4px;"
-                width="26px"
+                width="16px"
                 src="/Users/jasonleyser/Desktop/Screen Shot 2020-12-22 at 9.09.57 PM.png"
               />
               <span id="fireValue">0</span>
             </a>
           </div>
+          <img
+            width="300px"
+            src="../images/logo.png"
+            style="margin-bottom: 40px;"
+          />
           <p
             id="year"
             class="lead"
@@ -182,43 +204,6 @@
               class="btn btn btn-secondary"
               >discography</a
             >
-            <br />
-            <a
-              style="
-                border-radius: 0px;
-                background-color: #fcb632;
-                border: 3px solid #000;
-                color: #000;
-                margin-top: 32px;
-              "
-              class="btn btn btn-secondary"
-              onclick="addFire()"
-            >
-              <img
-                style="margin-bottom: 4px;"
-                width="26px"
-                src="/Users/jasonleyser/Desktop/Screen Shot 2020-12-22 at 9.09.57 PM.png"
-              />
-              <span id="fireValue">0</span>
-            </a>
-            <a
-              style="
-                border-radius: 0px;
-                background-color: #fcb632;
-                border: 3px solid #000;
-                color: #000;
-                margin-top: 32px;
-              "
-              class="btn btn btn-secondary"
-              onclick="addCoin()"
-            >
-              <img
-                style="margin-bottom: 4px;"
-                width="36px"
-                src="/Users/jasonleyser/Desktop/Screen Shot 2020-12-22 at 9.08.17 PM.png"
-              />
-              <span id="coinValue">0</span>
-            </a>
           </p>
         </div>
       </main>
