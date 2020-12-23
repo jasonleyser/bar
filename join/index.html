@@ -59,134 +59,59 @@
   </head>
 
   <body class="text-center" onload="refreshData()">
-    <div
-      class="cover-container d-flex h-100 mx-auto flex-column"
-      style="z-index: 1;"
-    >
+    <div class="cover-container d-flex mx-auto flex-column" style="z-index: 1;">
       <div style="height: 15%;"></div>
       <main role="main" class="inner cover">
-        <div id="sleepingCover" style="margin-top: 10%;">
+        <div id="sleepingCover" style="margin-top: 10%; text-align: left;">
           <p
             style="
               text-shadow: 1px 1px #000;
-              -webkit-text-stroke-width: 1px;
+              -webkit-text-stroke-width: 2px;
               -webkit-text-stroke-color: black;
               font-size: 50px;
+              color: #fdb716;
+              margin-bottom: 104px;
             "
           >
             Welcome<br />
             to Melotown!
           </p>
-        </div>
-        <div id="playerCover" style="display: none; padding-top: 10%;">
-          <div
+
+          <p
             style="
-              top: 0;
-              left: 0;
-              position: absolute;
-              height: auto;
-              display: 'block';
+              text-shadow: 1px 1px #000;
+              -webkit-text-stroke-width: 1px;
+              -webkit-text-stroke-color: black;
+              margin-top: 48px;
+              font-size: 24px;
             "
           >
-            <a
-              style="
-                border-radius: 0px;
-                background-color: #fcb632;
-                border: 3px solid #000;
-                color: #000;
-                position: relative;
-              "
-              class="btn btn btn-secondary"
-              onclick="addCoin()"
-            >
-              <img
-                style="margin-bottom: 4px;"
-                width="23px"
-                src="/Users/jasonleyser/Desktop/Screen Shot 2020-12-22 at 9.08.17 PM.png"
-              />
-              <span id="coinValue">0</span>
-            </a>
-            <a
-              style="
-                border-radius: 0px;
-                background-color: #fcb632;
-                border: 3px solid #000;
-                color: #000;
-                position: relative;
-                margin-left: -18px;
-              "
-              class="btn btn btn-secondary"
-              onclick="addFire()"
-            >
-              <img
-                style="margin-bottom: 4px;"
-                width="16px"
-                src="/Users/jasonleyser/Desktop/Screen Shot 2020-12-22 at 9.09.57 PM.png"
-              />
-              <span id="fireValue">0</span>
-            </a>
-          </div>
-          <img
-            width="300px"
-            src="../images/logo.png"
-            style="margin-bottom: 40px;"
-          />
-          <p
-            id="year"
-            class="lead"
+            What do i get now?
+          </p>
+          <u
             style="
-              font-size: 24px;
-              text-shadow: 2px 1px #000;
+              margin-top: 80px;
+              text-decoration: none;
+              text-shadow: 1px 1px #000;
               -webkit-text-stroke-width: 1px;
               -webkit-text-stroke-color: black;
+              list-style-image: url('../images/checkmark_icon.png');
             "
           >
-            LOADING <br />
-            PLAYER
-          </p>
-          <h1
-            id="title"
-            class="cover-heading"
-            style="
-              font-size: 40px;
-              text-shadow: 2px 1px #000;
-              padding-left: 4px;
-              padding-right: 4px;
-              -webkit-text-stroke-width: 1px;
-              -webkit-text-stroke-color: black;
-            "
-          ></h1>
-          <p
-            id="artist"
-            class="lead"
-            style="
-              font-size: 24px;
-              text-shadow: 2px 1px #000;
-              -webkit-text-stroke-width: 1px;
-              -webkit-text-stroke-color: black;
-            "
-          ></p>
-          <p class="lead" style="margin-top: 48px;">
-            <a
-              id="discogs_button"
-              href="#"
-              target="_blank"
-              style="
-                border-radius: 0px;
-                background-color: #fcb632;
-                border: 3px solid #000;
-                color: #000;
-              "
-              class="btn btn btn-secondary"
-              >discography</a
-            >
-          </p>
+            <li style="margin-top: 24px;">
+              Joining 100+ hip-hop heads!
+            </li>
+
+            <li style="margin-top: 24px;">
+              Tools for old school hip-hop mastery
+            </li>
+            <li style="margin-top: 24px;">
+              Notifications on live streams
+            </li>
+          </u>
+          <div style="height: 100px;"></div>
         </div>
       </main>
-
-      <footer class="mastfoot mt-auto">
-        <div class="inner"></div>
-      </footer>
     </div>
 
     <!-- Bootstrap core JavaScript
