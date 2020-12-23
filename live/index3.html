@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" href="../images/favicon.ico" />
+
+    <title>Live Now Playing - BARMELO FOR BREAKFAST</title>
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/4.0/examples/cover/"
+    />
+
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles for this template -->
+    <link href="../src/cover.css" rel="stylesheet" />
+    <script src="../scripts.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-JZ7WKCMDGP"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-JZ7WKCMDGP");
+    </script>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+      body {
+        background-color: #c1554e;
+        font-family: "Press Start 2P", cursive;
+        background-size: cover;
+        background-position: center bottom;
+        color: #fff;
+      }
+
+      .btn_hover:hover {
+        border: 3px solid #fff;
+      }
+    </style>
+  </head>
+
+  <body class="text-center" onload="refreshData()">
+    <div
+      class="cover-container d-flex h-100 mx-auto flex-column"
+      style="z-index: 1;"
+    >
+      <div style="height: 15%;"></div>
+      <main role="main" class="inner cover">
+        <div id="sleepingCover" style="margin-top: 10%;">
+          <img
+            width="300px"
+            src="../images/logo.png"
+            style="margin-bottom: 40px;"
+          />
+          <p
+            style="
+              text-shadow: 1px 1px #000;
+              -webkit-text-stroke-width: 1px;
+              -webkit-text-stroke-color: black;
+              font-size: 24px;
+            "
+          >
+            Next stream starts in
+          </p>
+          <div style="background-color: #000;">
+            <p
+              style="
+                text-shadow: 1px 1px #000;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: black;
+                color: #96b65a;
+                font-size: 20px;
+              "
+              id="demo"
+            >
+              loading...
+            </p>
+          </div>
+          <br /><br />
+
+          <form name="notify" method="POST" data-netlify="true">
+            <input
+              type="text"
+              placeholder="email"
+              style="width: 100%; text-align: center; height: 40px;"
+            />
+            <p>
+              <button
+                style="
+                  width: 100%;
+                  margin-top: 8px;
+                  background-color: #57423f;
+                  color: #fff;
+                "
+                type="submit"
+              >
+                Notify me >>
+              </button>
+            </p>
+          </form>
+          <br />
+          <p>Join 78 hip-hop heads</p>
+        </div>
+        <div id="playerCover" style="display: none; padding-top: 10%;">
+          <div
+            style="
+              top: 0;
+              left: 0;
+              position: absolute;
+              height: auto;
+              display: 'block';
+            "
+          >
+            <a
+              style="
+                border-radius: 0px;
+                background-color: #fcb632;
+                border: 3px solid #000;
+                color: #000;
+                position: relative;
+              "
+              class="btn btn btn-secondary"
+              onclick="addCoin()"
+            >
+              <img
+                style="margin-bottom: 4px;"
+                width="23px"
+                src="/Users/jasonleyser/Desktop/Screen Shot 2020-12-22 at 9.08.17 PM.png"
+              />
+              <span id="coinValue">0</span>
+            </a>
+            <a
+              style="
+                border-radius: 0px;
+                background-color: #fcb632;
+                border: 3px solid #000;
+                color: #000;
+                position: relative;
+                margin-left: -18px;
+              "
+              class="btn btn btn-secondary"
+              onclick="addFire()"
+            >
+              <img
+                style="margin-bottom: 4px;"
+                width="16px"
+                src="/Users/jasonleyser/Desktop/Screen Shot 2020-12-22 at 9.09.57 PM.png"
+              />
+              <span id="fireValue">0</span>
+            </a>
+          </div>
+          <img
+            width="300px"
+            src="../images/logo.png"
+            style="margin-bottom: 40px;"
+          />
+          <p
+            id="year"
+            class="lead"
+            style="
+              font-size: 24px;
+              text-shadow: 2px 1px #000;
+              -webkit-text-stroke-width: 1px;
+              -webkit-text-stroke-color: black;
+            "
+          >
+            LOADING <br />
+            PLAYER
+          </p>
+          <h1
+            id="title"
+            class="cover-heading"
+            style="
+              font-size: 40px;
+              text-shadow: 2px 1px #000;
+              padding-left: 4px;
+              padding-right: 4px;
+              -webkit-text-stroke-width: 1px;
+              -webkit-text-stroke-color: black;
+            "
+          ></h1>
+          <p
+            id="artist"
+            class="lead"
+            style="
+              font-size: 24px;
+              text-shadow: 2px 1px #000;
+              -webkit-text-stroke-width: 1px;
+              -webkit-text-stroke-color: black;
+            "
+          ></p>
+          <p class="lead" style="margin-top: 48px;">
+            <a
+              id="discogs_button"
+              href="#"
+              target="_blank"
+              style="
+                border-radius: 0px;
+                background-color: #fcb632;
+                border: 3px solid #000;
+                color: #000;
+              "
+              class="btn btn btn-secondary"
+              >discography</a
+            >
+          </p>
+        </div>
+      </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner"></div>
+      </footer>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.jQuery ||
+        document.write(
+          '<script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/jquery-slim.min.js"><\/script>'
+        );
+    </script>
+    <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js"></script>
+    <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
