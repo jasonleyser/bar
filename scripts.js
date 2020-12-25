@@ -1,7 +1,7 @@
 function addFire() {
   var date = formatDate();
   console.log(date);
-  fetch("https://api.countapi.xyz/hit/barmelo-for-breakfast-fire/8899988")
+  fetch("https://api.countapi.xyz/hit/barmelo-for-breakfast-fire/44778765")
     .then((response) => response.json())
     .then((data) => {
       // Here's a list of repos!
@@ -11,7 +11,7 @@ function addFire() {
 }
 
 function countFire() {
-  fetch("https://api.countapi.xyz/get/barmelo-for-breakfast-fire/8899988")
+  fetch("https://api.countapi.xyz/get/barmelo-for-breakfast-fire/44778765")
     .then((response) => response.json())
     .then((data) => {
       // Here's a list of repos!
@@ -23,7 +23,7 @@ function countFire() {
 function addCoin() {
   var date = formatDate();
   console.log(date);
-  fetch("https://api.countapi.xyz/hit/barmelo-for-breakfast-coin/8899988")
+  fetch("https://api.countapi.xyz/hit/barmelo-for-breakfast-coin/44778765")
     .then((response) => response.json())
     .then((data) => {
       // Here's a list of repos!
@@ -33,7 +33,7 @@ function addCoin() {
 }
 
 function countCoin() {
-  fetch("https://api.countapi.xyz/get/barmelo-for-breakfast-coin/8899988")
+  fetch("https://api.countapi.xyz/get/barmelo-for-breakfast-coin/44778765")
     .then((response) => response.json())
     .then((data) => {
       // Here's a list of repos!
