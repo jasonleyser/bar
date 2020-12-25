@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -98,16 +99,10 @@
           </div>
           <br /><br />
 
-          <form
-            name="notify-me"
-            method="POST"
-            netlify-honeypot="bot-field"
-            data-netlify="true"
-            action="/join"
-          >
+          <form name='notify-me' method='POST' action='/join'><input type='hidden' name='form-name' value='notify-me' />
             <input
               type="email"
-              placeholder="email"
+              placeholder="enter your email"
               name="email"
               id="email"
               style="width: 100%; text-align: center; height: 40px;"
@@ -119,6 +114,7 @@
                   margin-top: 8px;
                   background-color: #57423f;
                   color: #fff;
+                  padding: 4px
                 "
                 type="submit"
               >
@@ -127,7 +123,7 @@
             </p>
           </form>
           <br />
-          <p>Join 98+ hip-hop heads</p>
+          <p>Join 98+ hip-hop heads!</p>
         </div>
         <div id="playerCover" style="display:none; padding-top: 10%;">
           <div
