@@ -87,7 +87,7 @@ async function refreshData() {
       this.document.getElementById("title").innerHTML = data.title;
       this.document.getElementById("artist").innerHTML = ">" + data.artist;
       this.document.getElementById("year").innerHTML = info[1];
-      this.document.getElementById("discogs_button").href = data.buy_link;
+      this.document.getElementById("discogs_button").href = "https://melo.town/redirect/discogs.html?url=" + data.buy_link;
       console.log("ct:" + current_title);
 
       if (data.title == current_title) {
@@ -144,3 +144,11 @@ var x = setInterval(function () {
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+function redirect() {
+  var url = new URL(window.location.href);
+  var c = url.searchParams.get("url");
+  setTimeout(function(){
+            window.location.href = c;
+         }, 1000);
+}
