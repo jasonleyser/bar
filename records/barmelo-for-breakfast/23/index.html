@@ -16,18 +16,16 @@
   <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
   <!-- Custom styles for this template -->
-  <link href="../../../src/cover.css" rel="stylesheet" />
+  <link href="../../src/cover.css" rel="stylesheet" />
+
   <script>
-    async function getTracklist() {
-      fetch("records/barmelo-for-breakfast/23/tracklist.json")
-        .then((response) => response.json())
-        .then((data) => {
-          // Here's a list of repos!
-          console.log("hi");
-        });
+    async function fetchDataAsync() {
+      alert('hi')
+      const response = await fetch(url);
+      var data = await response.json();
+      document.getElementById('list').innerHTML = 'hi';
     }
   </script>
-
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JZ7WKCMDGP"></script>
   <script>
@@ -60,7 +58,7 @@
   </style>
 </head>
 
-<body class="text-center" onload="getTracklist()">
+<body class="text-center">
   <div class="cover-container d-flex h-100 mx-auto flex-column" style="z-index: 1;">
     <div style="height: 15%;"></div>
     <main role="main" class="inner cover">
@@ -92,7 +90,34 @@
         <br />
         <br />
         <br />
-        <p>1. Hello - This is Jason</p>
+        <ul style="list-style-type:none;">
+          <li style="padding-bottom:48px">Insane Nigga - LPSD </li>
+          <li style="padding-bottom:48px">Quality of Life - Quite Def</li>
+          <li style="padding-bottom:48px">Essence - Dangerous Minded Clik</li>
+          <li style="padding-bottom:48px">Live and Seek - Triple Crown</li>
+          <li style="padding-bottom:48px">Hustlers Theme (Remix) - Smoothe Da Hustler</li>
+          <li style="padding-bottom:48px">Mandatory - Wanderers</li>
+          <li style="padding-bottom:48px">Facial Expressions - DJ Shark Ft. B-Bandj</li>
+          <li style="padding-bottom:48px">This is War - CassteDaro</li>
+          <li style="padding-bottom:48px">Monster Pt. II - Robie Man</li>
+          <li style="padding-bottom:48px">When in Doubt - Postmen Ft. E-Life</li>
+          <li style="padding-bottom:48px"> Artform - Autnoyz</li>
+          <li style="padding-bottom:48px"> Down Like That - Tribal-Men</li>
+          <li style="padding-bottom:48px"> Real G’s Die Hard - Young Lord</li>
+          <li style="padding-bottom:48px"> Wicked N Raw - B.A.G.S.</li>
+          <li style="padding-bottom:48px"> Dime Piece - Perverted Rym Throw</li>
+          <li style="padding-bottom:48px"> Huhh! - Malignant</li>
+          <li style="padding-bottom:48px"> WWII - Northside Sound</li>
+          <li style="padding-bottom:48px"> Dope Compensation - Distortionists</li>
+          <li style="padding-bottom:48px"> Boriqua Mameez - 4 Iza Cru</li>
+          <li style="padding-bottom:48px"> Rotten Apple - Black Majik</li>
+          <li style="padding-bottom:48px"> Capture - Skill</li>
+          <li style="padding-bottom:48px"> Drop a Kewel 4 Da Godz - Poops & FB</li>
+          <li style="padding-bottom:48px"> The Maji - The Most Talented</li>
+          <li style="padding-bottom:48px"> Lunatic Asylum - Lunatic Asylum</li>
+          <li style="padding-bottom:48px"> Da Reign - Ill Source</li>
+        </ul>
+
       </div>
 
     </main>
@@ -109,6 +134,8 @@
         '<script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/jquery-slim.min.js"><\/script>'
       );
   </script>
+
+
 
   <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js"></script>
   <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
