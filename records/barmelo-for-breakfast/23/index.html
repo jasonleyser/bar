@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="icon" href="../images/favicon.ico" />
+
+  <title>Live Now Playing - BARMELO FOR BREAKFAST</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/cover/" />
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="../../../src/cover.css" rel="stylesheet" />
+  <script>
+    async function getTracklist() {
+      fetch("records/barmelo-for-breakfast/23/tracklist.json")
+        .then((response) => response.json())
+        .then((data) => {
+          // Here's a list of repos!
+          console.log("hi");
+        });
+    }
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JZ7WKCMDGP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-JZ7WKCMDGP");
+  </script>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+    body {
+      background-color: #c1554e;
+      font-family: "Press Start 2P", cursive;
+      background-size: cover;
+      background-position: center bottom;
+      color: #fff;
+    }
+
+    .btn_hover {}
+
+    .btn_hover:hover {
+      border: 3px solid #fff !important;
+    }
+  </style>
+</head>
+
+<body class="text-center" onload="getTracklist()">
+  <div class="cover-container d-flex h-100 mx-auto flex-column" style="z-index: 1;">
+    <div style="height: 15%;"></div>
+    <main role="main" class="inner cover">
+      <div id="sleepingCover" style="margin-top: 10%;">
+        <img width="300px" src="../../../images/logo.png" style="margin-bottom: 40px;" />
+
+        <p style="
+              text-shadow: 1px 1px #000;
+              -webkit-text-stroke-width: 1px;
+              -webkit-text-stroke-color: black;
+              font-size: 24px;
+            ">
+          Episode
+        </p>
+        <div>
+          <p style="
+                text-shadow: 1px 1px #000;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: black;
+                color: #3B9D6B;
+                font-size: 20px;
+              ">
+            #23
+          </p>
+        </div>
+        <br /><br />
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ySLovfgTJiM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br />
+        <br />
+        <br />
+        <br />
+        <p>1. Hello - This is Jason</p>
+      </div>
+
+    </main>
+
+    <footer class="mastfoot mt-auto">
+      <div class="inner"></div>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script>
+    window.jQuery ||
+      document.write(
+        '<script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/jquery-slim.min.js"><\/script>'
+      );
+  </script>
+
+  <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js"></script>
+  <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
