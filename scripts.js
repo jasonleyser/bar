@@ -1,7 +1,9 @@
+var count_id = "4223423"
+
 function addFire() {
   var date = formatDate();
   console.log(date);
-  fetch("https://api.countapi.xyz/hit/barmelo-for-breakfast-fire/3453453")
+  fetch("https://api.countapi.xyz/hit/barmelo-for-breakfast-fire/" + count_id)
     .then((response) => response.json())
     .then((data) => {
       // Here's a list of repos!
@@ -11,7 +13,7 @@ function addFire() {
 }
 
 function countFire() {
-  fetch("https://api.countapi.xyz/get/barmelo-for-breakfast-fire/3453453")
+  fetch("https://api.countapi.xyz/get/barmelo-for-breakfast-fire/" + count_id)
     .then((response) => response.json())
     .then((data) => {
       // Here's a list of repos!
@@ -23,7 +25,7 @@ function countFire() {
 function addCoin() {
   var date = formatDate();
   console.log(date);
-  fetch("https://api.countapi.xyz/hit/barmelo-for-breakfast-coin/3453453")
+  fetch("https://api.countapi.xyz/hit/barmelo-for-breakfast-coin/" + count_id)
     .then((response) => response.json())
     .then((data) => {
       // Here's a list of repos!
@@ -32,8 +34,20 @@ function addCoin() {
     });
 }
 
+function addVote(vote) {
+  console.log(vote)
+  fetch("https://api.countapi.xyz/get/barmelo-for-breakfast-" + vote + "/" + count_id)
+    .then((response) => response.json())
+    .then((data) => {
+      // Here's a list of repos!
+      document.getElementById( vote + "Value").innerHTML = 1;
+
+    });
+}
+
+
 function countCoin() {
-  fetch("https://api.countapi.xyz/get/barmelo-for-breakfast-coin/3453453")
+  fetch("https://api.countapi.xyz/get/barmelo-for-breakfast-coin/" + count_id)
     .then((response) => response.json())
     .then((data) => {
       // Here's a list of repos!
@@ -56,8 +70,8 @@ function formatDate(date) {
 
 async function getTitle() {
   fetch(
-    "https://api.radioking.io/widget/radio/barmelo-for-breakfast/track/current"
-  )
+      "https://api.radioking.io/widget/radio/barmelo-for-breakfast/track/current"
+    )
     .then((response) => response.json())
     .then((data) => {
       console.log("data::" + data.title);
@@ -119,7 +133,7 @@ async function refreshData() {
   }
 }
 
-var x = setInterval(function () {
+var x = setInterval(function() {
   var countDownDate = new Date("Dec 27, 2020 08:00:00").getTime();
 
   // Get today's date and time
@@ -148,7 +162,7 @@ var x = setInterval(function () {
 function redirect() {
   var url = new URL(window.location.href);
   var c = url.searchParams.get("url");
-  setTimeout(function(){
-            window.location.href = c;
-         }, 1000);
+  setTimeout(function() {
+    window.location.href = c;
+  }, 1000);
 }
