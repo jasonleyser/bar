@@ -134,7 +134,7 @@ async function refreshData() {
 }
 
 var x = setInterval(function() {
-  var countDownDate = new Date("Dec 27, 2020 08:00:00").getTime();
+  var countDownDate = new Date("Dec 29, 2020 08:00:00").getTime();
 
   // Get today's date and time
   var now = new Date().getTime();
