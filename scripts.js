@@ -95,11 +95,8 @@ async function refreshData() {
       var info = data.album.split(",");
       console.log(data.title);
 
-      this.document.getElementById("sleepingCover").style.display = "none";
-      this.document.getElementById("playerCover").style.display = "inline";
-
       this.document.getElementById("title").innerHTML = data.title;
-      this.document.getElementById("artist").innerHTML = ">" + data.artist;
+      this.document.getElementById("artist").innerHTML = data.artist;
       this.document.getElementById("year").innerHTML = info[1];
       this.document.getElementById("discogs_button").href = "https://melo.town/redirect/discogs.html?url=" + data.buy_link;
       console.log("ct:" + current_title);
