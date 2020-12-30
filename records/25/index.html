@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="shortcut icon" type="image/png" href="../../../images/favicon.ico">
+
+  <link rel="manifest" href="./meta/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#E03C34">
+  <meta name="theme-color" content="#E03C34">
+
+  <meta property="og:type" content="website" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="../../../src/psone.css">
+  <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+  <title>Melotown Radio - Morning Hip-Hop Episode #25</title>
+
+  <style>
+    body {
+      background-color: #000;
+      background-image: url('../../../images/bg_main-min.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top;
+      font-size: 50px;
+      background-attachment: fixed;
+
+    }
+
+    .play {
+      font-family: "Play";
+    }
+
+    .logo {
+      margin: 4rem 2rem 0 2rem;
+      height: 50px;
+    }
+
+    .fork-me {
+      position: absolute;
+      right: 0;
+      top: 0;
+
+    }
+
+    .main-wrapper {
+      height: 100vh;
+    }
+
+    .section {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .half {
+      background: #f9f9f9;
+      height: 50%;
+      width: 100%;
+      margin: 15px 0;
+    }
+
+    @media only screen and (max-width: 768px) {
+
+      .play {
+        margin-left: 1rem;
+        margin-top: 1rem;
+
+      }
+
+      .container {
+        width: 90%;
+      }
+
+      .buttons {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+      }
+
+      .containers {
+        width: calc(100% - .5em);
+      }
+
+      .title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        box-sizing: border-box;
+        width: 260px;
+        height: 26px;
+        font-size: 52px;
+        line-height: 0px;
+      }
+
+      .progress:not(:first-child) {
+        margin-top: 35px;
+      }
+
+      .progress:first-child {
+        margin-top: 10px;
+      }
+
+      .controller-buttons {
+        margin: 1rem;
+        display: flex;
+        align-items: center;
+        flex-flow: row wrap;
+      }
+
+      .progress>.subtitle {
+        position: absolute;
+        top: .44em;
+        left: 20%;
+        display: block;
+      }
+
+      h1 {
+        font-size: 1.7em;
+      }
+
+      .footer {
+        text-align: center;
+      }
+
+      .logo {
+        margin-top: .5em;
+      }
+
+      .fork-me {
+        top: .5em;
+      }
+
+      .input {
+        width: 90%;
+      }
+    }
+
+    .arrow {
+      animation: MoveUpDown 1.5s linear infinite;
+      position: absolute;
+      margin-bottom:-100px;
+      left:45%;
+    }
+
+    @keyframes MoveUpDown {
+
+      0%,
+      100% {
+        bottom: 0;
+      }
+
+      50% {
+        bottom: 5px;
+      }
+    }
+
+    @media only screen and (min-width: 769px) {
+      .progress>.subtitle {
+        position: absolute;
+        top: .44em;
+        left: 15%;
+        display: block;
+      }
+
+      .controller-buttons {
+        margin: 1rem;
+        display: flex;
+        align-items: center;
+        flex-flow: row wrap;
+      }
+    }
+
+    @media only screen and (min-width: 320px) and (max-width: 321px) {
+      body {
+        width: calc(100% + .5em)
+      }
+
+      h1 {
+        font-size: 1.7em;
+      }
+    }
+  </style>
+
+  <title>PSone.css</title>
+</head>
+
+<body>
+
+  <header style="position: relative;">
+    <div style="display:flex;align-items:center;flex-flow:row wrap;">
+      <img style="width:45%;margin:auto;margin-top:80px" src="../../../images/mt_logo_main.png">
+    </div>
+    <p class="fork-me"><a style="color: #fff;">CH 01</a></p>
+  </header>
+
+  <div class="container-ps dark" style="margin-top:80px;">
+    <label class="title">Message</label>
+    <p id="welcome_message"></p>
+  </div>
+<br />
+  <div class="row" >
+    <div class="col-lg-6 col-md-12 col-sm-12">
+      <div class="container-ps dark" class="position-sticky" style="position: -webkit-sticky;position: sticky;top:30px">
+        <h2 class="title">WATCH</h2>
+        <iframe width="100%" height="315" autoplay src="https://www.youtube.com/embed/KcYbew78yo8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br />
+        <br />
+        <img width="50px" class="arrow" src="../../../images/arrow.png">
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-12 col-sm-12">
+      <div class="container-ps dark">
+        <h2 class="title">TRACKLIST</h2>
+
+        <ol style="text-shadow: 1px 1px #000;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+        margin-left:25px;
+        list-style-type: decimal-leading-zero;
+        ">
+          <li style="padding-bottom:48px">You and Me - Scorp <span style="color:#3B9D6B;">1996</span></li>
+          <li style="padding-bottom:48px">Fables - The Nobodies <span style="color:#3B9D6B;">1997</span></li>
+          <li style="padding-bottom:48px">Sugar 99 Remix - Scaramanga <span style="color:#3B9D6B;">2000</span></li>
+          <li style="padding-bottom:48px">My Life - Encore <span style="color:#3B9D6B;">199X</span></li>
+          <li style="padding-bottom:48px">The Meaning - Adagio Ft. Wisdom <span style="color:#3B9D6B;">1998</span></li>
+          <li style="padding-bottom:48px">The Marvelous - Scoob Rock <span style="color:#3B9D6B;">1999</span></li>
+          <li style="padding-bottom:48px">Terry Bogard - 108 Dragons <span style="color:#3B9D6B;">199X</span></li>
+          <li style="padding-bottom:48px">Injection - Midnight Fusion <span style="color:#3B9D6B;">1995</span></li>
+          <li style="padding-bottom:48px">Rap Trilogy - Mytee G Poetic <span style="color:#3B9D6B;">1994</span></li>
+          <li style="padding-bottom:48px">Please Help Me - NYRU <span style="color:#3B9D6B;">199X</span></li>
+          <li style="padding-bottom:48px">Flossy - Big Loon-E-Toon <span style="color:#3B9D6B;">1998</span></li>
+          <li style="padding-bottom:48px">Ghetto Star - Jace ft. Dionna <span style="color:#3B9D6B;">1996</span></li>
+          <li style="padding-bottom:48px">Who's Da Man - R.I.F. <span style="color:#3B9D6B;">1997</span></li>
+          <li style="padding-bottom:48px">Make No Mistake - Cooley Roc <span style="color:#3B9D6B;">1995</span></li>
+          <li style="padding-bottom:48px">Sleep Sinatra - Solar Windz Ft. Poetic Death <span style="color:#3B9D6B;">199X</span></li>
+          <li style="padding-bottom:48px">Circles - 3rd Eye <span style="color:#3B9D6B;">1997</span></li>
+          <li style="padding-bottom:48px">Ocean View - Doomzday 1998</span></li>
+          <li style="padding-bottom:48px">Do It Again - Whodini <span style="color:#3B9D6B;">1994</span></li>
+          <li style="padding-bottom:48px">Who What - Thief In Da Nite <span style="color:#3B9D6B;">1995</span></li>
+          <li style="padding-bottom:48px">Feelin' Nice - Swing <span style="color:#3B9D6B;">1997</span></li>
+          <li style="padding-bottom:48px">The Truth - Legend aka Kama Kazi <span style="color:#3B9D6B;">1998</span></li>
+          <li style="padding-bottom:48px">Love Is Love - B-i <span style="color:#3B9D6B;">1998</span></li>
+          <li style="padding-bottom:48px">One Life - Freedom Of Culture <span style="color:#3B9D6B;">2000</span></li>
+          <li style="padding-bottom:48px">Learn to Earn - Mathematik <span style="color:#3B9D6B;">1999</span></li>
+          <li style="padding-bottom:48px">Daybreak - U The Exquizite <span style="color:#3B9D6B;">199X</span></li>
+          <li style="padding-bottom:48px">Work Like a Slave - El Battalion <span style="color:#3B9D6B;">1998</span></li>
+          <li style="padding-bottom:48px">Surrounded - Dutchmin <span style="color:#3B9D6B;">1997</span></li>
+          <li style="padding-bottom:48px">Da Rawness - U.G <span style="color:#3B9D6B;">2000</span></li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <script>
+    new TypeIt("#welcome_message", {
+        speed: 65,
+        waitUntilVisible: true,
+        lifeLike: true,
+        cursor: false,
+        loop: false
+      })
+      .type("Yo!  ", {
+        delay: 300
+      })
+      .type("-- This is an archived record of episode 25...", {
+        delay: 1700
+      })
+      .go();
+  </script>
+
+</body>
+
+</html>
