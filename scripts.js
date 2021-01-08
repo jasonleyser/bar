@@ -1,4 +1,4 @@
-var count_id = "9988774"
+var count_id = "776664477"
 
 function addFire() {
   var date = formatDate();
